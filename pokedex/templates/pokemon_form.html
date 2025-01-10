@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Formulario de Pokemon{% endblock title %}
+{% block content %}
+    {% csrf_token %}
+    {{ form.as_div }}
+{% endblock content %}
