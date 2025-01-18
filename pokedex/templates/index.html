@@ -6,9 +6,9 @@
       <a href="{% url "pokedex:add_pokemon" %}">Anadir Pokemon</a>
     {% endif %}
     <div class="row">
-        {% for pokemon in pokemons %}
-        <div> class="col-sm-4"
-          <br>
+      {% for pokemon in pokemons %}
+      <div class="col-sm-4">   
+        <br>
           <div class="card pokemon-card" style="width: 18rem;">
             <img class="card-img-top" src="{{ pokemon.picture.url }}" alt="...">
             <div class="card-body">
@@ -30,13 +30,4 @@
         </div>  
         {% endfor %}
     </div>
-    <h3>Entrenadores</h3>
-    <ul class="list-group">
-      {% for trainer in trainers %}
-      <li class="list-group-item">
-          <a href="trainer/{{trainer.id}}">{{ trainer | capfirst }}</a>
-          <p>Nivel: {{trainer.level}}</p>
-      </li>
-      {% endfor %}
-    </ul>
 {% endblock content %}

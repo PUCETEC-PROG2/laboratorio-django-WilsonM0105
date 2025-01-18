@@ -25,6 +25,14 @@ def pokemon(request, pokemon_id):
     }
     return HttpResponse(template.render(context, request))
 
+def trainers(request):
+    trainers = Trainer.objects.all()
+    template = loader.get_template('trainers.html')
+    context = {
+        'trainers': trainers
+    }
+    return HttpResponse(template.render(context, request))
+
 def trainer_details(request, trainer_id):
     trainer = Trainer.objects.get(id=trainer_id)
     template = loader.get_template('display_trainer.html')

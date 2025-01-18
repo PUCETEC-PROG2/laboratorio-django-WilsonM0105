@@ -4,10 +4,10 @@
     <p>Has elegido el pokemon: <strong>{{ pokemon | capfirst }}</strong></p>
     <p>Detalles</p>
     <ul>
-        <li>Nombre: {{ pokemon.name}}</li>
-        <li>Tipo: {{ pokemon.type}}</li>
-        <li>Peso: {{ pokemon.weight}}</li>
-        <li>Altura: {{ pokemon.height}}</li>
+        <li>Nombre: {{ pokemon.name }}</li>
+        <li>Tipo: {{ pokemon.type }}</li>
+        <li>Peso: {{ pokemon.weight|floatformat:0 }}</li>
+        <li>Altura: {{ pokemon.height|floatformat:0 }}</li>
         <li>Entrenador: {{ pokemon.trainer}}</li>
     </ul>    
 {% endblock content %}
